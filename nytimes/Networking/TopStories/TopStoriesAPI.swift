@@ -39,8 +39,8 @@ private enum TopStoriesRequest: RequestConvertible {
 enum TopStoriesAPI {
     
     static func getStories(category: StoryCategory,
-                           completion:  @escaping (AFDataResponse<String>) -> Void) {
-        AF.request(TopStoriesRequest.getStories(category: category)).responseDecodable(of: String.self,
+                           completion:  @escaping (AFDataResponse<TopStories>) -> Void) {
+        AF.request(TopStoriesRequest.getStories(category: category)).responseDecodable(of: TopStories.self,
                                                                                        completionHandler: completion)
     }
     
