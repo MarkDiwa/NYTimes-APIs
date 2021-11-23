@@ -12,10 +12,10 @@ private enum TopStoriesRequest: RequestConvertible {
     case getStories(category: StoryCategory)
     
     var path: String {
-        var storyPath = "/svc/topstories/v2/"
+        var storyPath = "/svc/topstories/v2"
         switch self {
         case .getStories(let category):
-            storyPath += "/svc/topstories/v2/\(category.rawValue).json"
+            storyPath += "/\(category.rawValue).json"
         }
         return storyPath
     }

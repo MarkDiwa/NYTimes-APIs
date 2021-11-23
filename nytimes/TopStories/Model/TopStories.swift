@@ -12,9 +12,9 @@ struct TopStories: Codable {
     var status: String
     var copyright: String
     var section: String
-    var lastUpdated: Date
+    var lastUpdated: String
     var numResults: Int
-    var stories: [Story]
+    var stories: [Story]?
 
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -35,17 +35,17 @@ struct Story: Codable {
     var url: String
     var uri: String
     var byline: String
-    var itemType: ItemType
-    var updatedDate: Date
-    var createdDate: Date
-    var publishedDate: Date
+    var itemType: String
+    var updatedDate: String
+    var createdDate: String
+    var publishedDate: String
     var materialTypeFacet: String
     var kicker: String
-    var desFacet: [String]
-    var orgFacet: [String]
-    var perFacet: [String]
-    var geoFacet: [String]
-    var multimedia: [Multimedia]
+    var desFacet: [String]?
+    var orgFacet: [String]?
+    var perFacet: [String]?
+    var geoFacet: [String]?
+    var multimedia: [Multimedia]?
     var shortURL: String
 
     enum CodingKeys: String, CodingKey {
@@ -71,19 +71,14 @@ struct Story: Codable {
     }
 }
 
-enum ItemType: String, Codable {
-    case article = "Article"
-    case interactive = "Interactive"
-}
-
 // MARK: - Multimedia
 struct Multimedia: Codable {
     var url: String
-    var format: Format
+    var format: String
     var height: Int
     var width: Int
-    var type: TypeEnum
-    var subtype: Subtype
+    var type: String
+    var subtype: String
     var caption: String
     var copyright: String
 
@@ -97,16 +92,4 @@ struct Multimedia: Codable {
         case caption
         case copyright
     }
-}
-
-enum Format: String, Codable {
-    case superJumbo
-}
-
-enum Subtype: String, Codable {
-    case photo
-}
-
-enum TypeEnum: String, Codable {
-    case image
 }
