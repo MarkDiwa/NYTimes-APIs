@@ -54,6 +54,7 @@ identifier_name:
     - id
     - app
     - url
+    - uri
     - tag
     - age
     - row
