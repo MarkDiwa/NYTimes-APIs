@@ -17,64 +17,78 @@
                 <rect key="frame" x="0.0" y="0.0" width="590" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-Rz-NE2" userLabel="Story Image">
-                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXu-St-3Ta" userLabel="Card View">
+                        <rect key="frame" x="8" y="8" width="574" height="114"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-Rz-NE2" userLabel="Story Image">
+                                <rect key="frame" x="0.0" y="0.0" width="114" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JBX-Rz-NE2" secondAttribute="height" multiplier="1:1" id="tzD-uV-1lO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="An Article Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk2-Dg-Fs4" userLabel="Title Label">
+                                <rect key="frame" x="130" y="0.0" width="428" height="49"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/23/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oab-qp-Yzt" userLabel="Published Date Label">
+                                <rect key="frame" x="130" y="86" width="380" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By M. D. Diwa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-er-Fds" userLabel="Author Label">
+                                <rect key="frame" x="130" y="65" width="380" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-tV-dcY" userLabel="Bookmark Button">
+                                <rect key="frame" x="526" y="66" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bdz-tV-dcY" secondAttribute="height" multiplier="1:1" id="7rZ-4g-2xH"/>
+                                    <constraint firstAttribute="height" constant="32" id="gDe-BU-pfp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="bookMarkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DVS-y3-HjL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="JBX-Rz-NE2" secondAttribute="height" multiplier="1:1" id="tzD-uV-1lO"/>
+                            <constraint firstItem="8xW-er-Fds" firstAttribute="top" secondItem="wk2-Dg-Fs4" secondAttribute="bottom" constant="16" id="7Et-u3-gLh"/>
+                            <constraint firstItem="oab-qp-Yzt" firstAttribute="top" secondItem="8xW-er-Fds" secondAttribute="bottom" constant="4" id="DcP-Da-T31"/>
+                            <constraint firstAttribute="bottom" secondItem="bdz-tV-dcY" secondAttribute="bottom" constant="16" id="JGF-th-RaG"/>
+                            <constraint firstAttribute="trailing" secondItem="bdz-tV-dcY" secondAttribute="trailing" constant="16" id="JHl-sn-SjP"/>
+                            <constraint firstItem="oab-qp-Yzt" firstAttribute="leading" secondItem="JBX-Rz-NE2" secondAttribute="trailing" constant="16" id="JfQ-oK-sco"/>
+                            <constraint firstItem="bdz-tV-dcY" firstAttribute="leading" secondItem="8xW-er-Fds" secondAttribute="trailing" constant="16" id="KDB-oQ-IBc"/>
+                            <constraint firstAttribute="trailing" secondItem="wk2-Dg-Fs4" secondAttribute="trailing" constant="16" id="PXj-Io-Vlv"/>
+                            <constraint firstItem="JBX-Rz-NE2" firstAttribute="leading" secondItem="DXu-St-3Ta" secondAttribute="leading" id="RlF-5J-Vxz"/>
+                            <constraint firstAttribute="bottom" secondItem="JBX-Rz-NE2" secondAttribute="bottom" id="U1d-zM-fe9"/>
+                            <constraint firstItem="8xW-er-Fds" firstAttribute="leading" secondItem="JBX-Rz-NE2" secondAttribute="trailing" constant="16" id="Zxd-jD-HXw"/>
+                            <constraint firstItem="wk2-Dg-Fs4" firstAttribute="leading" secondItem="JBX-Rz-NE2" secondAttribute="trailing" constant="16" id="auL-Tb-Zg4"/>
+                            <constraint firstItem="wk2-Dg-Fs4" firstAttribute="top" secondItem="DXu-St-3Ta" secondAttribute="top" id="bk3-iV-6xA"/>
+                            <constraint firstAttribute="bottom" secondItem="oab-qp-Yzt" secondAttribute="bottom" constant="16" id="i1X-Nk-8yE"/>
+                            <constraint firstItem="JBX-Rz-NE2" firstAttribute="top" secondItem="DXu-St-3Ta" secondAttribute="top" id="ucW-h6-3qS"/>
+                            <constraint firstItem="bdz-tV-dcY" firstAttribute="leading" secondItem="oab-qp-Yzt" secondAttribute="trailing" constant="16" id="xgr-Fh-8AF"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="An Article Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk2-Dg-Fs4" userLabel="Title Label">
-                        <rect key="frame" x="146" y="16" width="428" height="20.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/23/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oab-qp-Yzt" userLabel="Published Date Label">
-                        <rect key="frame" x="146" y="102" width="380" height="12"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" systemColor="systemGrayColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-tV-dcY" userLabel="Bookmark Button">
-                        <rect key="frame" x="542" y="82" width="32" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="bdz-tV-dcY" secondAttribute="height" multiplier="1:1" id="7rZ-4g-2xH"/>
-                            <constraint firstAttribute="height" constant="32" id="gDe-BU-pfp"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system"/>
-                        <connections>
-                            <action selector="bookMarkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DVS-y3-HjL"/>
-                        </connections>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By M. D. Diwa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xW-er-Fds" userLabel="Author Label">
-                        <rect key="frame" x="146" y="81" width="408" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="JBX-Rz-NE2" secondAttribute="bottom" id="2lx-IF-uB5"/>
-                    <constraint firstAttribute="trailing" secondItem="bdz-tV-dcY" secondAttribute="trailing" constant="16" id="4Me-Dn-FhN"/>
-                    <constraint firstAttribute="bottom" secondItem="oab-qp-Yzt" secondAttribute="bottom" constant="16" id="4pt-4C-OgH"/>
-                    <constraint firstItem="bdz-tV-dcY" firstAttribute="leading" secondItem="oab-qp-Yzt" secondAttribute="trailing" constant="16" id="4rq-AJ-hhA"/>
-                    <constraint firstAttribute="trailing" secondItem="wk2-Dg-Fs4" secondAttribute="trailing" constant="16" id="AFc-tw-V51"/>
-                    <constraint firstItem="8xW-er-Fds" firstAttribute="top" secondItem="wk2-Dg-Fs4" secondAttribute="bottom" priority="200" constant="16" id="C0V-fL-vWz"/>
-                    <constraint firstItem="JBX-Rz-NE2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="I1f-dU-xQl"/>
-                    <constraint firstItem="wk2-Dg-Fs4" firstAttribute="leading" secondItem="JBX-Rz-NE2" secondAttribute="trailing" constant="16" id="LHy-47-Hs6"/>
-                    <constraint firstItem="8xW-er-Fds" firstAttribute="leading" secondItem="JBX-Rz-NE2" secondAttribute="trailing" constant="16" id="SfC-W3-Zu0"/>
-                    <constraint firstItem="oab-qp-Yzt" firstAttribute="top" secondItem="8xW-er-Fds" secondAttribute="bottom" constant="4" id="VLW-Ep-d1P"/>
-                    <constraint firstItem="wk2-Dg-Fs4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Zyn-mC-JvG"/>
-                    <constraint firstAttribute="bottom" secondItem="bdz-tV-dcY" secondAttribute="bottom" constant="16" id="gvv-Tf-cOA"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="8xW-er-Fds" secondAttribute="trailing" constant="16" id="hPW-1C-egl"/>
-                    <constraint firstItem="oab-qp-Yzt" firstAttribute="leading" secondItem="JBX-Rz-NE2" secondAttribute="trailing" constant="16" id="ryY-dp-YTx"/>
-                    <constraint firstItem="JBX-Rz-NE2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sVq-vo-1jO"/>
+                    <constraint firstItem="DXu-St-3Ta" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1B4-8l-ecb"/>
+                    <constraint firstItem="DXu-St-3Ta" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2Ex-pb-TBq"/>
+                    <constraint firstAttribute="bottom" secondItem="DXu-St-3Ta" secondAttribute="bottom" constant="8" id="4wd-da-LF6"/>
+                    <constraint firstAttribute="trailing" secondItem="DXu-St-3Ta" secondAttribute="trailing" constant="8" id="8Jr-Fk-Sy4"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="authorLabel" destination="8xW-er-Fds" id="HuN-tD-i7c"/>
+                <outlet property="bookmarkButton" destination="bdz-tV-dcY" id="8bt-cG-uia"/>
+                <outlet property="cardView" destination="DXu-St-3Ta" id="seh-G9-bLz"/>
                 <outlet property="publishedLabel" destination="oab-qp-Yzt" id="1RO-xL-TOb"/>
                 <outlet property="storyImage" destination="JBX-Rz-NE2" id="7jx-wg-rIO"/>
                 <outlet property="titleLabel" destination="wk2-Dg-Fs4" id="hVf-NH-aKA"/>
@@ -83,7 +97,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

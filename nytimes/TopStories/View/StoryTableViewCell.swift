@@ -14,6 +14,8 @@ class StoryTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var publishedLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var bookmarkButton: UIButton!
     
     static let reuseIdentifier = "StoryTableViewCell"
     static let nib = UINib(nibName: reuseIdentifier, bundle: nil)
@@ -23,7 +25,9 @@ class StoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cardView.layer.cornerRadius = 10
+        cardView.layer.borderWidth = 0.5
+        cardView.layer.borderColor = UIColor.gray.cgColor
     }
     
     func setup(with storyViewModel: StoryCellViewModel) {
@@ -31,7 +35,12 @@ class StoryTableViewCell: UITableViewCell {
         titleLabel.text = storyViewModel.title
         publishedLabel.text = storyViewModel.publishedDate
         authorLabel.text = storyViewModel.author
+        bookmarkButton.setImage(storyViewModel.bookmarkIcon, for: .normal)
         storyViewModel.setImage(of: storyImage)
+    }
+    
+    func reloadBookmarkImage() {
+        bookmarkButton.setImage(storyViewModel?.bookmarkIcon, for: .normal)
     }
     
     @IBAction private func bookMarkButtonTapped(_ sender: Any) {
