@@ -14,6 +14,11 @@
 		83CF4648274C93AC009CF77D /* TopStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4647274C93AC009CF77D /* TopStoriesViewModel.swift */; };
 		83CF464A274C93F2009CF77D /* StoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4649274C93F2009CF77D /* StoryCellViewModel.swift */; };
 		83CF464D274C94D6009CF77D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF464B274C94D6009CF77D /* HomeViewController.swift */; };
+		83CF4653274CB57F009CF77D /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4651274CB57F009CF77D /* BookmarksViewController.swift */; };
+		83CF4654274CB57F009CF77D /* BookmarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CF4652274CB57F009CF77D /* BookmarksViewController.xib */; };
+		83CF4657274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4655274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.swift */; };
+		83CF4658274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CF4656274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.xib */; };
+		83CF465A274CBD4D009CF77D /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4659274CBD4D009CF77D /* BookmarksViewModel.swift */; };
 		83E8254B274C726E0054D3E4 /* RequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8254A274C726E0054D3E4 /* RequestConvertible.swift */; };
 		83E8254D274C72B60054D3E4 /* TopStoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8254C274C72B60054D3E4 /* TopStoriesAPI.swift */; };
 		83E8254F274C73970054D3E4 /* StoryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8254E274C73970054D3E4 /* StoryCategory.swift */; };
@@ -36,6 +41,11 @@
 		83CF4647274C93AC009CF77D /* TopStoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewModel.swift; sourceTree = "<group>"; };
 		83CF4649274C93F2009CF77D /* StoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCellViewModel.swift; sourceTree = "<group>"; };
 		83CF464B274C94D6009CF77D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		83CF4651274CB57F009CF77D /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		83CF4652274CB57F009CF77D /* BookmarksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksViewController.xib; sourceTree = "<group>"; };
+		83CF4655274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkStoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		83CF4656274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkStoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		83CF4659274CBD4D009CF77D /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
 		83E8254A274C726E0054D3E4 /* RequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConvertible.swift; sourceTree = "<group>"; };
 		83E8254C274C72B60054D3E4 /* TopStoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesAPI.swift; sourceTree = "<group>"; };
 		83E8254E274C73970054D3E4 /* StoryCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCategory.swift; sourceTree = "<group>"; };
@@ -148,9 +158,13 @@
 		83E82552274C76640054D3E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83CF4655274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.swift */,
+				83CF4651274CB57F009CF77D /* BookmarksViewController.swift */,
 				83CF464B274C94D6009CF77D /* HomeViewController.swift */,
 				83E8255C274C79FC0054D3E4 /* StoryTableViewCell.swift */,
 				83E82557274C78680054D3E4 /* TopStoriesViewController.swift */,
+				83CF4656274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.xib */,
+				83CF4652274CB57F009CF77D /* BookmarksViewController.xib */,
 				83E8255D274C79FC0054D3E4 /* StoryTableViewCell.xib */,
 				83E82558274C78680054D3E4 /* TopStoriesViewController.xib */,
 			);
@@ -162,6 +176,7 @@
 			children = (
 				83CF4647274C93AC009CF77D /* TopStoriesViewModel.swift */,
 				83CF4649274C93F2009CF77D /* StoryCellViewModel.swift */,
+				83CF4659274CBD4D009CF77D /* BookmarksViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -237,7 +252,9 @@
 			files = (
 				83726BD2274C694200A6D622 /* LaunchScreen.storyboard in Resources */,
 				83726BCF274C694200A6D622 /* Assets.xcassets in Resources */,
+				83CF4658274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.xib in Resources */,
 				83E8255A274C78680054D3E4 /* TopStoriesViewController.xib in Resources */,
+				83CF4654274CB57F009CF77D /* BookmarksViewController.xib in Resources */,
 				83E8255F274C79FC0054D3E4 /* StoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CF465A274CBD4D009CF77D /* BookmarksViewModel.swift in Sources */,
+				83CF4653274CB57F009CF77D /* BookmarksViewController.swift in Sources */,
 				83E82559274C78680054D3E4 /* TopStoriesViewController.swift in Sources */,
 				83726BC6274C694100A6D622 /* AppDelegate.swift in Sources */,
 				83E82556274C76A40054D3E4 /* TopStories.swift in Sources */,
@@ -317,6 +336,7 @@
 				83E8254B274C726E0054D3E4 /* RequestConvertible.swift in Sources */,
 				83CF464A274C93F2009CF77D /* StoryCellViewModel.swift in Sources */,
 				83CF464D274C94D6009CF77D /* HomeViewController.swift in Sources */,
+				83CF4657274CB7BB009CF77D /* BookmarkStoryCollectionViewCell.swift in Sources */,
 				83E8254D274C72B60054D3E4 /* TopStoriesAPI.swift in Sources */,
 				83CF4648274C93AC009CF77D /* TopStoriesViewModel.swift in Sources */,
 				83E8255E274C79FC0054D3E4 /* StoryTableViewCell.swift in Sources */,

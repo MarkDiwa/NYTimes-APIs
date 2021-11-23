@@ -1,27 +1,26 @@
 //
-//  StoryTableViewCell.swift
+//  BookmarkStoryCollectionViewCell.swift
 //  nytimes
 //
 //  Created by Mark Dennis Diwa on 11/23/21.
 //
 
-import Kingfisher
 import UIKit
 
-class StoryTableViewCell: UITableViewCell {
+class BookmarkStoryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var storyImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var publishedDateLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var bookmarkButton: UIButton!
+    @IBOutlet weak var cardView: UIView!
     
-    static let reuseIdentifier = "StoryTableViewCell"
+    static let reuseIdentifier = "BookmarkStoryCollectionViewCell"
     static let nib = UINib(nibName: reuseIdentifier, bundle: nil)
     
     var storyViewModel: StoryCellViewModel?
-    var bookmarkButtonTapped: (StoryTableViewCell) -> Void = { _ in }
+    var bookmarkButtonTapped: (BookmarkStoryCollectionViewCell) -> Void = { _ in }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,7 +42,8 @@ class StoryTableViewCell: UITableViewCell {
         bookmarkButton.setImage(storyViewModel?.bookmarkIcon, for: .normal)
     }
     
-    @IBAction private func bookMarkButtonTapped(_ sender: Any) {
+
+    @IBAction func bookmarkButtonTapped(_ sender: Any) {
         bookmarkButtonTapped(self)
     }
 }

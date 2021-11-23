@@ -89,8 +89,8 @@
                 <outlet property="authorLabel" destination="8xW-er-Fds" id="HuN-tD-i7c"/>
                 <outlet property="bookmarkButton" destination="bdz-tV-dcY" id="8bt-cG-uia"/>
                 <outlet property="cardView" destination="DXu-St-3Ta" id="seh-G9-bLz"/>
-                <outlet property="publishedLabel" destination="oab-qp-Yzt" id="1RO-xL-TOb"/>
-                <outlet property="storyImage" destination="JBX-Rz-NE2" id="7jx-wg-rIO"/>
+                <outlet property="publishedDateLabel" destination="oab-qp-Yzt" id="1RO-xL-TOb"/>
+                <outlet property="storyImageView" destination="JBX-Rz-NE2" id="7jx-wg-rIO"/>
                 <outlet property="titleLabel" destination="wk2-Dg-Fs4" id="hVf-NH-aKA"/>
             </connections>
             <point key="canvasLocation" x="333.33333333333337" y="179.12946428571428"/>

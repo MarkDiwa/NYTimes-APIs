@@ -2,7 +2,7 @@
 //  TopStoriesViewController.swift
 //  nytimes
 //
-//  Created by user204729 on 11/23/21.
+//  Created by Mark Dennis Diwa on 11/23/21.
 //
 
 import UIKit
@@ -18,6 +18,11 @@ class TopStoriesViewController: UIViewController {
         super.viewDidLoad()
         setup()
         viewModel.getStories(in: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
 }

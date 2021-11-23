@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  nytimes
 //
-//  Created by user204729 on 11/23/21.
+//  Created by Mark Dennis Diwa on 11/23/21.
 //
 
 import UIKit
@@ -32,8 +32,7 @@ extension HomeViewController {
         item2.image = UIImage(systemName: "bookmark.fill")
         
         let topStoriesVC = TopStoriesViewController()
-        let bookMarksVC = UIViewController()
-        bookMarksVC.view.backgroundColor = .red
+        let bookMarksVC = BookmarksViewController()
 
         topStoriesVC.tabBarItem = item1
         bookMarksVC.tabBarItem = item2

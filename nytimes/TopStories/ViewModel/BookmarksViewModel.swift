@@ -1,5 +1,5 @@
 //
-//  TopStoriesViewModel.swift
+//  BookmarksViewModel.swift
 //  nytimes
 //
 //  Created by Mark Dennis Diwa on 11/23/21.
@@ -7,28 +7,19 @@
 
 import Foundation
 
-class TopStoriesViewModel {
+class BookmarksViewModel {
     
     private var stories = [Story]()
-    weak var viewController: TopStoriesViewController?
     
     var numberOfItems: Int {
         return stories.count
     }
     
-    func getStories(in viewController: TopStoriesViewController) {
-        self.viewController = viewController
-        TopStoriesAPI.getStories(category: .business) { [weak self] apiResponse in
-            guard let self = self else { return }
-            switch apiResponse.result {
-            case .success(let data):
-                self.stories = data.stories?.filter({ !$0.title.isEmpty }) ?? []
-                viewController.activityIndicator.stopAnimating()
-                viewController.tableView.reloadData()
-            case .failure(let error):
-                print("Errorrrrr: \(error)")
-            }
-        }
+    func getStories(in viewController: BookmarksViewController) {
+        let stories = UserDefaults.bookmarks
+        guard !stories.isEmpty else { return }
+        self.stories = stories
+        viewController.collectionView.reloadData()
     }
     
     func addOrRemoveBookmark(row: Int) {
