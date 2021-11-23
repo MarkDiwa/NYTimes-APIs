@@ -96,12 +96,13 @@
 		83726BC4274C694100A6D622 /* nytimes */ = {
 			isa = PBXGroup;
 			children = (
-				83E82551274C76590054D3E4 /* TopStories */,
-				83E82549274C71E30054D3E4 /* Networking */,
+				83726BD3274C694200A6D622 /* Info.plist */,
 				83726BC5274C694100A6D622 /* AppDelegate.swift */,
 				83726BCE274C694200A6D622 /* Assets.xcassets */,
 				83726BD0274C694200A6D622 /* LaunchScreen.storyboard */,
-				83726BD3274C694200A6D622 /* Info.plist */,
+				83E82549274C71E30054D3E4 /* Networking */,
+				83E82551274C76590054D3E4 /* TopStories */,
+				83CF4644274C9294009CF77D /* Utils */,
 			);
 			path = nytimes;
 			sourceTree = "<group>";
@@ -135,7 +136,6 @@
 		83E82551274C76590054D3E4 /* TopStories */ = {
 			isa = PBXGroup;
 			children = (
-				83CF4644274C9294009CF77D /* Utils */,
 				83E82554274C76780054D3E4 /* Model */,
 				83E82553274C76700054D3E4 /* ViewModel */,
 				83E82552274C76640054D3E4 /* View */,
