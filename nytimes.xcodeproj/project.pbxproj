@@ -10,6 +10,9 @@
 		83726BC6274C694100A6D622 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83726BC5274C694100A6D622 /* AppDelegate.swift */; };
 		83726BCF274C694200A6D622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83726BCE274C694200A6D622 /* Assets.xcassets */; };
 		83726BD2274C694200A6D622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83726BD0274C694200A6D622 /* LaunchScreen.storyboard */; };
+		83CF4646274C92A4009CF77D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4645274C92A4009CF77D /* Extensions.swift */; };
+		83CF4648274C93AC009CF77D /* TopStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4647274C93AC009CF77D /* TopStoriesViewModel.swift */; };
+		83CF464A274C93F2009CF77D /* StoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CF4649274C93F2009CF77D /* StoryCellViewModel.swift */; };
 		83E8254B274C726E0054D3E4 /* RequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8254A274C726E0054D3E4 /* RequestConvertible.swift */; };
 		83E8254D274C72B60054D3E4 /* TopStoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8254C274C72B60054D3E4 /* TopStoriesAPI.swift */; };
 		83E8254F274C73970054D3E4 /* StoryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E8254E274C73970054D3E4 /* StoryCategory.swift */; };
@@ -28,6 +31,9 @@
 		83726BCE274C694200A6D622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83726BD1274C694200A6D622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83726BD3274C694200A6D622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83CF4645274C92A4009CF77D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		83CF4647274C93AC009CF77D /* TopStoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewModel.swift; sourceTree = "<group>"; };
+		83CF4649274C93F2009CF77D /* StoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCellViewModel.swift; sourceTree = "<group>"; };
 		83E8254A274C726E0054D3E4 /* RequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConvertible.swift; sourceTree = "<group>"; };
 		83E8254C274C72B60054D3E4 /* TopStoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesAPI.swift; sourceTree = "<group>"; };
 		83E8254E274C73970054D3E4 /* StoryCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCategory.swift; sourceTree = "<group>"; };
@@ -100,6 +106,14 @@
 			path = nytimes;
 			sourceTree = "<group>";
 		};
+		83CF4644274C9294009CF77D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				83CF4645274C92A4009CF77D /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		83E82549274C71E30054D3E4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +135,7 @@
 		83E82551274C76590054D3E4 /* TopStories */ = {
 			isa = PBXGroup;
 			children = (
+				83CF4644274C9294009CF77D /* Utils */,
 				83E82554274C76780054D3E4 /* Model */,
 				83E82553274C76700054D3E4 /* ViewModel */,
 				83E82552274C76640054D3E4 /* View */,
@@ -142,6 +157,8 @@
 		83E82553274C76700054D3E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				83CF4647274C93AC009CF77D /* TopStoriesViewModel.swift */,
+				83CF4649274C93F2009CF77D /* StoryCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,9 +309,12 @@
 				83E82559274C78680054D3E4 /* TopStoriesViewController.swift in Sources */,
 				83726BC6274C694100A6D622 /* AppDelegate.swift in Sources */,
 				83E82556274C76A40054D3E4 /* TopStories.swift in Sources */,
+				83CF4646274C92A4009CF77D /* Extensions.swift in Sources */,
 				83E8254F274C73970054D3E4 /* StoryCategory.swift in Sources */,
 				83E8254B274C726E0054D3E4 /* RequestConvertible.swift in Sources */,
+				83CF464A274C93F2009CF77D /* StoryCellViewModel.swift in Sources */,
 				83E8254D274C72B60054D3E4 /* TopStoriesAPI.swift in Sources */,
+				83CF4648274C93AC009CF77D /* TopStoriesViewModel.swift in Sources */,
 				83E8255E274C79FC0054D3E4 /* StoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
