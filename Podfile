@@ -6,6 +6,7 @@ target 'nytimes' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'Kingfisher'
   pod 'SwiftLint', '0.43.0'
   
   # Pods for Benipal
