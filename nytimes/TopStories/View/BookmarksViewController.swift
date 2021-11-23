@@ -91,4 +91,11 @@ extension BookmarksViewController: UICollectionViewDataSource {
 
 extension BookmarksViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let story = viewModel.story(in: indexPath.row) else { return }
+        let viewController = StoryDetailViewController()
+        let viewModel = StoryDetailViewModel(story: story)
+        viewController.viewModel = viewModel
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
