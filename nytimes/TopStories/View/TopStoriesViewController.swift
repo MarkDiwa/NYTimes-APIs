@@ -44,7 +44,12 @@ extension TopStoriesViewController: UITableViewDataSource {
         guard let storyTableCell = dequeuedCell as? StoryTableViewCell,
               let story = viewModel.story(in: indexPath.row) else { return dequeuedCell }
         storyTableCell.setup(with: StoryCellViewModel(story: story))
-        return UITableViewCell(frame: .zero)
+        storyTableCell.bookmarkButtonTapped = { [weak self] storyCell in
+            guard let row = tableView.indexPath(for: storyCell)?.row else { return }
+            self?.viewModel.addOrRemoveBookmark(row: row)
+            storyCell.reloadBookmarkImage()
+        }
+        return storyTableCell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,4 +60,7 @@ extension TopStoriesViewController: UITableViewDataSource {
 
 extension TopStoriesViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
 }
