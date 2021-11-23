@@ -56,7 +56,6 @@
 				A3194C80D86D828D5A48C12F /* Pods-nytimes.debug.xcconfig */,
 				D527C5EEF88F8E10FABACAC9 /* Pods-nytimes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +103,7 @@
 				83726BBF274C694100A6D622 /* Frameworks */,
 				83726BC0274C694100A6D622 /* Resources */,
 				ED6030BD1D84518BA4927486 /* [CP] Embed Pods Frameworks */,
+				83E82548274C6C720054D3E4 /* Linter */,
 			);
 			buildRules = (
 			);
@@ -161,6 +161,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83E82548274C6C720054D3E4 /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		86968EC20DE80D58ABD395B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
