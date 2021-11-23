@@ -16,9 +16,7 @@ class BookmarksViewModel {
     }
     
     func getStories(in viewController: BookmarksViewController) {
-        let stories = UserDefaults.bookmarks
-        guard !stories.isEmpty else { return }
-        self.stories = stories
+        self.stories = UserDefaults.bookmarks
         viewController.collectionView.reloadData()
     }
     
