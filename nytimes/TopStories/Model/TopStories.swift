@@ -14,7 +14,7 @@ struct TopStories: Codable {
     var section: String
     var lastUpdated: Date
     var numResults: Int
-    var articles: [Article]
+    var stories: [Story]
 
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -22,12 +22,12 @@ struct TopStories: Codable {
         case section = "section"
         case lastUpdated = "last_updated"
         case numResults = "num_results"
-        case articles = "results"
+        case stories = "results"
     }
 }
 
-// MARK: - Article
-struct Article: Codable {
+// MARK: - Story
+struct Story: Codable {
     var section: String
     var subsection: String
     var title: String
